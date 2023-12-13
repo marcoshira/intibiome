@@ -1,39 +1,69 @@
 import styled, { css } from 'styled-components';
-import { Theme } from '../../../types/styled-components';
-import { HeaderProps } from '../Header';
 
-const colorChanger = (red: boolean, theme: Theme) =>
-    css`
-        background-color: ${red ? theme.colors.secondaryColor : 'white'};
+export const FooterWrapper = styled.div`
+    ${({ theme }) => css`
+        width: 100vw;
+        height: 242px;
+        background-color: ${theme.colors.blue};
+        color: ${theme.colors.white};
+        padding: 3% 20%;
 
-        h4 {
-            a {
-                &:hover {
-                    color: ${red ? 'white' : theme.colors.secondaryColor};
-                    border-bottom: 1px dotted
-                        ${red ? 'white' : theme.colors.secondaryColor};
-                }
+        .footerLinks {
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            p {
+                font-size: 16px;
+                text-align: right;
+                letter-spacing: 0.32px;
+                border-left: 1px solid ${theme.colors.white};
+                padding: 5px 24px;
+            }
+
+            p:first-child {
+                border-left: none;
             }
         }
-    `;
 
-export const FooterWrapper = styled.footer<HeaderProps>`
-    ${({ theme, red }) => css`
-        width: 100vw;
-        height: 8rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .logos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-        ${colorChanger(red, theme)}
+        @media ${theme.media.ipad} {
+            height: auto;
+            .footerLinks {
+                margin-bottom: 0px;
+                flex-direction: column;
+                p {
+                    text-align: center;
+                    border-left: none;
+                    position: relative;
+                    margin: 30px 0;
+                }
+                p::after {
+                    content: '';
+                    width: 25px;
+                    background-color: white;
+                    position: absolute;
+                    bottom: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-bottom: 1px solid ${theme.colors.white};
+                }
 
-        h4 {
-            color: ${theme.colors.neutral};
-            a {
-                border-bottom: 1px dotted ${theme.colors.neutral};
-                color: ${theme.colors.neutral};
-                text-decoration: none;
-                transition: ${theme.transitions.faster};
+                p:last-child::after {
+                    content: none;
+                }
+            }
+
+            .logos {
+                height: 170px;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin: 60px 0;
             }
         }
     `}

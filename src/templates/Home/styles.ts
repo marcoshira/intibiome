@@ -1,4 +1,3 @@
-import { ContentWrapperContainer } from '@/components/ContentWrapper/styles';
 import styled, { css } from 'styled-components';
 
 export const Home = styled.div`
@@ -7,15 +6,14 @@ export const Home = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: ${theme.colors.secondaryColor};
 
-        ${ContentWrapperContainer} {
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            grid-template-columns: repeat(auto-fill, minmax(27rem, 37rem));
-            row-gap: 5rem;
-            column-gap: 1.5rem;
+        @media ${theme.media.ipad} {
+            margin-top: 79px;
+            .iconsImg {
+                width: 96%;
+                height: auto;
+                object-fit: contain;
+            }
         }
     `}
 `;
