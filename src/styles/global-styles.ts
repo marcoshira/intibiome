@@ -18,7 +18,6 @@ body{
   font-size: 1.6rem;
   font-family: ${({ theme }) => theme.font.family.default};
   font-weight: 400;
-  overflow-x: hidden;
   /* background-color: #efefef; */
   
 }

@@ -9,10 +9,7 @@ import { Discovery } from '@/components/Discovery';
 import { Button } from '@/components/Button';
 import { Footer } from '@/components/Footer';
 
-export type HomeProps = {
-    title?: string;
-};
-export const Home = ({ title }: HomeProps) => {
+export const Home = () => {
     return (
         <Styled.Home>
             <Header />

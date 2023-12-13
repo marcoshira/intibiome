@@ -3,7 +3,7 @@ import * as Styled from './styles';
 
 export type SectionProps = {
     title?: string;
-    children?: ReactNode;
+    children: ReactNode;
 };
 export const Section = ({ title, children }: SectionProps) => {
     return (

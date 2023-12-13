@@ -27,6 +27,7 @@ export const SectionWrapper = styled.div`
             padding: 0 4%;
             width: 100%;
             margin-bottom: 60px;
+            overflow-x: auto;
 
             h3 {
                 margin: 40px 0;
@@ -34,9 +35,9 @@ export const SectionWrapper = styled.div`
             }
 
             .content {
-                max-width: 100%;
-                overflow-x: scroll;
+                width: 100%;
                 justify-content: left;
+                overflow-x: auto;
             }
         }
     `}

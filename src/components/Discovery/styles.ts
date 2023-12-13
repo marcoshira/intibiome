@@ -20,6 +20,10 @@ export const DiscoveryWrapper = styled.div`
 
         @media ${theme.media.ipad} {
             margin: 0 8px;
+            /* max-width: 33.333%;
+            flex-basis: 33.333%;
+            flex-grow: 0;
+            flex-shrink: 0; */
         }
     `}
 `;
