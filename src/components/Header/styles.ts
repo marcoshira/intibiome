@@ -16,11 +16,6 @@ export const HeaderWrapper = styled.div`
             top: 28px;
         }
 
-        ${Menu} {
-            position: absolute;
-            top: 80px;
-        }
-
         @media ${theme.media.ipad} {
             width: 100%;
             position: fixed;

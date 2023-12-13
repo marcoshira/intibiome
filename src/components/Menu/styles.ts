@@ -37,7 +37,7 @@ export const MenuWrapper = styled.nav<MenuVisible>`
             top: 0px;
             left: 0;
             right: 0;
-            height: ${visible ? `auto` : `calc(100vw - 70px)`};
+            height: ${visible ? `auto` : `calc(100vh - 70px)`};
         }
     `}
 `;
